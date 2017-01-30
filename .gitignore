@@ -1,0 +1,17 @@
+logs
+project/project
+project/target
+target
+/out
+/.classpath
+/.project
+/.settings
+workspace.xml
+.DS_Store
+.idea/
+.idea_modules/
+.idea/workspace.xml
+.idea/codeStyleSettings.xml
+*.iml
+
+
