@@ -52,14 +52,17 @@ Now we are able to do something like:
   ).protocols(grpcConfig)
 
 ```
-The _ch.tamedia.gatling.actions_ package contains _GrpcExecutableAction_ trait and two traits that extends this one named 
-_GrpcExecutableAsyncAction_ and _GrpcExecutableSyncAction_. These two traits are important when we want to build Sync or Async 
-test calls. The traits are used by _GrpcActionAction_ in pattern matching when we have to handle response from
+The [_ch.tamedia.gatling.actions_](https://github.com/tamediadigital/grpc-gatling/tree/master/src/main/scala/ch/tamedia/gatling/actions) package contains [_GrpcExecutableAction_](https://github.com/tamediadigital/grpc-gatling/blob/master/src/main/scala/ch/tamedia/gatling/actions/GrpcExecutableAction.scala) trait and two traits that extends this one named 
+[_GrpcExecutableAsyncAction_](https://github.com/tamediadigital/grpc-gatling/blob/master/src/main/scala/ch/tamedia/gatling/actions/GrpcExecutableAsyncAction.scala) and [_GrpcExecutableSyncAction_](https://github.com/tamediadigital/grpc-gatling/blob/master/src/main/scala/ch/tamedia/gatling/actions/GrpcExecutableSyncAction.scala). These two traits are important when we want to build Sync or Async 
+test calls. The traits are used by [_GrpcActionActor_](https://github.com/tamediadigital/grpc-gatling/blob/master/src/main/scala/ch/tamedia/gatling/actions/GrcpActionActor.scala) in pattern matching when we have to handle response from
 the server. Response can be _Option[GeneratedMessage]_ or _Future[GeneratedMessage]_ depending is it sync or async call.
 
-This give us option just to implement specific actions such as _GrpcSyncCallAction_ and _GrpcAsyncCallAction_.
+This give us option just to implement specific actions such as 
+[_GrpcSyncCallAction_](https://github.com/tamediadigital/grpc-gatling/blob/master/src/main/scala/ch/tamedia/gatling/actions/impl/GrpcSyncCallAction.scala)
+and [_GrpcAsyncCallAction_](https://github.com/tamediadigital/grpc-gatling/blob/master/src/main/scala/ch/tamedia/gatling/actions/impl/GrpcAsyncCallAction.scala).
 
-In order to validate response it is necessary to write your own Checkers such as one _GrpcCustomCheck_
+In order to validate response it is necessary to write your own Checkers such as one 
+[_GrpcCustomCheck_](https://github.com/tamediadigital/grpc-gatling/blob/master/src/main/scala/ch/tamedia/gatling/GrpcCustomCheck.scala)
 
 After all we are now able to get some nice Gatling result and we are able to test all of our [gRPC](http://www.grpc.io/) calls.
 
