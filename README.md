@@ -1,4 +1,4 @@
-#Sample project to test gRPC based servers using Gatling
+# Sample project to test gRPC based servers using Gatling
 
 Terms:
 
@@ -8,7 +8,7 @@ Terms:
 2. [gRPC](http://www.grpc.io/) is a high performance, open-source universal RPC framework
 ![alt-text](assets/images/rsz_1rsz_grpc-logo.png "Gatling logo")
 
-####Background
+#### Background
 
 As one of [Tamedia](http://www.tamedia.ch/) projects required highly performable [HTTP/2](https://http2.github.io/) based
 server with well defined API that can be used from various clients and from various programming languages,
@@ -23,7 +23,7 @@ and supports [JMS](http://gatling.io/docs/2.2.3/jms.html).
 
 What with [gRPC](http://www.grpc.io/)?
 
-####Solution
+#### Solution
 
 Fortunately, [Gatling](http://gatling.io/) gives you opportunity to build your own protocols that put us in right direction.
 Bjorn Beskow’s article titled:
